@@ -1,0 +1,263 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/*
+Colors used
+
+Background Color (Cream): #eff0ed
+Primary Color (Gray Blue): #3B6378
+Secondary Color (Maroon): #7d314c
+Highlight Color (Copper): #aa6b51
+Lowlight Color (Dark Gray): #2B2B2B
+ */
+
+ * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+    background-color: #eff0ed;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 200;
+    text-decoration: none;
+    font-variant: none;
+    color: #2b2b2b;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: 200;
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  a {
+      color: #3B6378;
+      text-decoration: none;
+  }
+
+  a:visited {
+      /* visited link */
+      color: #2b2b2b;
+  }
+
+  a:hover {
+    /* No underlining when hovering over a link */
+    color: #7d314c;
+    text-decoration: none;
+  }
+
+  a:focus {
+    /* No underlining when hovering over a link */
+    color: #7d314c;
+    text-decoration: none;
+  }
+
+  a:active {
+      /* selected link */
+      color: #aa6b51;
+  }
+
+  .button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles button */
+    background-color: #B5C3C2;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* button width, border, and styling*/
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.6s opacity;
+    -o-transition: 0.6s opacity;
+    transition: 0.6s opacity;
+  }
+
+  button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles button */
+    background-color: #B5C3C2;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* button width, border, and styling*/
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.6s opacity;
+    -o-transition: 0.6s opacity;
+    transition: 0.6s opacity;
+  }
+
+  button:hover, 
+  button:focus,
+  .button:hover,
+  .button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button */
+    opacity: 0.8;
+  }
+
+  .button__secondary {
+    background-color: #3B6378;
+    color: white;
+  }
+
+  .profile {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .profile__portrait {
+    float: left;
+    max-width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+
+  .page-footer {
+    clear:both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    text-align: center;
+  }
+
+  .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .page-header__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 200px;
+            flex: 0 1 200px;
+    max-height: 35px;
+  }
+
+  .page-header__item:last-child {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    text-align: right;
+  }
+
+  .navigation-list {
+    list-style-type: none;
+  }
+
+  .navigation-list li{
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .about_me {
+    margin-top: 30px;
+  }
+
+  .contact {
+    margin-top: 30px;
+  }
+
+  .skills {
+    margin-top: 30px;
+  }
+
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .grid__item {
+    background-color: lightgray;
+  }
+  
+  @media all and (max-width: 500px) {
+    .grid {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      -ms-grid-columns: 1fr 10px 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width:750px){
+    /* shared code */
+    .grid {
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+  }
+
+  @-webkit-keyframes color-change {
+    from {
+      fill: #B5C3C2;
+    }
+    to {
+      fill: #aa6b51;
+    }
+  }
+
+  @keyframes color-change {
+    from {
+      fill: #B5C3C2;
+    }
+    to {
+      fill: #aa6b51;
+    }
+  }
+
+  .ferris_wheel {
+    -webkit-animation: 4s color-change infinite alternate linear;
+            animation: 4s color-change infinite alternate linear;
+  }
+
+
+ 
+ 
+ 
