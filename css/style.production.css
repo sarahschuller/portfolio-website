@@ -8,11 +8,11 @@
 /*
 Colors used
 
-Background Color (Cream): #eff0ed
-Primary Color (Gray Blue): #3B6378
-Secondary Color (Maroon): #7d314c
-Highlight Color (Copper): #aa6b51
-Lowlight Color (Dark Gray): #2B2B2B
+Background Color (Snow): #f6f5f6
+Primary Color (Navy Blue): #263245
+Secondary Color (Mauve): #837b8e
+Highlight Color (Sky): #879fc0
+Lowlight Color (Plum): #281f29
  */
 
  * {
@@ -21,17 +21,17 @@ Lowlight Color (Dark Gray): #2B2B2B
 }
 
 body {
-    background-color: #eff0ed;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #f6f5f6;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 300;
 }
 
 h1 {
-    font-size: 40px;
-    font-weight: 200;
+    font-size: 60px;
+    font-weight: 300;
     text-decoration: none;
     font-variant: none;
-    color: #2b2b2b;
+    color: #281f29;
   }
   
   h2 {
@@ -45,30 +45,30 @@ h1 {
   }
 
   a {
-      color: #3B6378;
+      color: #263245;
       text-decoration: none;
   }
 
   a:visited {
       /* visited link */
-      color: #2b2b2b;
+      color: #87728c;
   }
 
   a:hover {
     /* No underlining when hovering over a link */
-    color: #7d314c;
+    color: #879fc0;
     text-decoration: none;
   }
 
   a:focus {
     /* No underlining when hovering over a link */
-    color: #7d314c;
+    color: #879fc0;
     text-decoration: none;
   }
 
   a:active {
       /* selected link */
-      color: #aa6b51;
+      color: #281f29;
   }
 
   .button {
@@ -78,13 +78,13 @@ h1 {
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles button */
-    background-color: #B5C3C2;
-    color: black;
+    background-color: #263245;
+    color: #f6f5f6;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
     border-radius: 3px;
     /* button width, border, and styling*/
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     -webkit-transition: 0.6s opacity;
     -o-transition: 0.6s opacity;
     transition: 0.6s opacity;
@@ -97,36 +97,65 @@ h1 {
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles button */
-    background-color: #B5C3C2;
-    color: black;
+    background-color: #263245;
+    color: #f6f5f6;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
     border-radius: 3px;
     /* button width, border, and styling*/
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     -webkit-transition: 0.6s opacity;
     -o-transition: 0.6s opacity;
     transition: 0.6s opacity;
   }
 
-  button:hover, 
-  button:focus,
-  .button:hover,
-  .button:focus {
+  button:hover {
     /* lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
+    background-color: #87728c;
+    color: #f6f5f6;
     /* reduces the opacity of the button */
     opacity: 0.8;
   }
 
+  button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    background-color: #87728c;
+    color: #f6f5f6;
+    /* reduces the opacity of the button */
+    opacity: 0.8;
+  }
+
+  .button:hover {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    background-color: #87728c;
+    color: #f6f5f6;
+    /* reduces the opacity of the button */
+    opacity: 0.8;
+  }
+
+  .button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    background-color: #87728c;
+    color: #f6f5f6;
+    /* reduces the opacity of the button */
+    opacity: 0.8;
+  }
+
+  .button:visited {
+    color: #f6f5f6;
+  }
   .button__secondary {
-    background-color: #3B6378;
-    color: white;
+    background-color: #879fc0;
+    color: black;
   }
 
   .profile {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 40px auto;
   }
 
   .profile__portrait {
@@ -162,7 +191,7 @@ h1 {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 200px;
             flex: 0 1 200px;
-    max-height: 35px;
+    max-height: 33px;
   }
 
   .page-header__item:last-child {
@@ -180,18 +209,168 @@ h1 {
     display: inline-block;
     margin-left: 15px;
     margin-right: 15px;
+    font-size: 20px;
+  }
+
+  nav a
+  {
+      text-decoration: none;
+      font: 20px;
+      margin: 0px 0px;
+      padding: 0px 0px;
+      position: relative;
+      z-index: 0;
+      cursor: pointer;
+  }
+  
+    nav.page-header__item a:before, nav.page-header__item a:after
+  {
+      position: relative;
+      opacity: 0;
+      width: 0%;
+      height: 1px;
+      content: ' | ';
+  }
+  
+  nav.page-header__item a:before
+  {
+      left: 0px;
+      top: 0px;
+  }
+  
+  nav.page-header__item a:after
+  {
+      right: 0px;
+      bottom: 0px;
+  }
+  
+  nav.page-header__item a:hover:before, nav.page-header__item a:hover:after
+  {
+      opacity: 1;
+      width: 100%;
+  }
+
+
+  span {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #281f29
   }
 
   .about_me {
+    margin: 40px auto;
+    max-width: 700px;
+  }
+
+  .resume {
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+  }
+
+ .contact_me {
+    margin: 0 auto;
+    max-width: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+
+  .contact_form {
     margin-top: 30px;
   }
 
-  .contact {
-    margin-top: 30px;
+  table {
+    margin: 0 auto;
+    width: 75%;
+    border: 1px solid #281f29;
+    background-color: lightgray;
+    color: #263245;
   }
 
-  .skills {
-    margin-top: 30px;
+  thead {
+    background-color: #879fc0;
+    color: #f6f5f6;
+    height: 30px;
+  }
+
+  tbody {
+    background-color: #f6f5f6;
+    text-align: center;
+    height: 100px;
+  }
+
+  tr:hover {
+    background-color: #87728c;
+    color: #f6f5f6;
+  }
+
+  .hobbies {
+    list-style: none;
+    text-align: center;
+  }
+
+  input {
+    width: 75%;
+    padding: 10px 15px;
+    margin: 12px 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #281f29;
+  }
+
+  input:focus {
+    border: 1px solid #87728c;
+    background-color: lightgray;
+  }
+
+  input[type=button] {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: #263245;
+    color: #f6f5f6;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.6s opacity;
+    -o-transition: 0.6s opacity;
+    transition: 0.6s opacity;
+    width: 110px;
+  }
+
+  input[type=submit] {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: #263245;
+    color: #f6f5f6;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.6s opacity;
+    -o-transition: 0.6s opacity;
+    transition: 0.6s opacity;
+    width: 110px;
+  }
+
+  textarea {
+    width: 88%;
+    height: 90px;
+    padding: 10px 15px;
+    margin: 12px 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #281f29;
+    resize: none;
   }
 
   .grid {
@@ -230,32 +409,71 @@ h1 {
       grid-row: auto / auto;
     }
     h1 {
-      font-size: 22px;
+      font-size: 35px;
     }
   }
-
   @-webkit-keyframes color-change {
     from {
-      fill: #B5C3C2;
+      fill: #263245;
     }
     to {
-      fill: #aa6b51;
+      fill: #879fc0;
     }
   }
-
   @keyframes color-change {
     from {
-      fill: #B5C3C2;
+      fill: #263245;
     }
     to {
-      fill: #aa6b51;
+      fill: #879fc0;
     }
   }
-
-  .ferris_wheel {
-    -webkit-animation: 4s color-change infinite alternate linear;
-            animation: 4s color-change infinite alternate linear;
+ 
+  @-webkit-keyframes color-change_2 {
+    from {
+      fill: #879fc0;
+    }
+    to {
+      fill: #263245;
+    }
   }
+ 
+  @keyframes color-change_2 {
+    from {
+      fill: #879fc0;
+    }
+    to {
+      fill: #263245;
+    }
+  }
+ 
+ .back {
+   -webkit-animation-duration: 6s;
+           animation-duration: 6s;
+   -webkit-animation-name: color-change;
+           animation-name: color-change;
+   -webkit-animation-iteration-count: infinite;
+           animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+           animation-direction: alternate;
+   -webkit-animation-timing-function: linear;
+           animation-timing-function: linear;
+ }
+ 
+ .front {
+   -webkit-animation-duration: 6s;
+           animation-duration: 6s;
+   -webkit-animation-name: color-change_2;
+           animation-name: color-change_2;
+   -webkit-animation-iteration-count: infinite;
+           animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+           animation-direction: alternate;
+   -webkit-animation-timing-function: linear;
+           animation-timing-function: linear;
+ }
+
+
 
 
  
