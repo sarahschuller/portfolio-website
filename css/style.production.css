@@ -33,12 +33,12 @@ h1 {
     font-variant: none;
     color: #281f29;
   }
-  
+
   h2 {
     font-size: 24px;
     font-weight: 200;
   }
-  
+
   h3 {
     font-size: 18px;
     font-weight: 200;
@@ -222,7 +222,7 @@ h1 {
       z-index: 0;
       cursor: pointer;
   }
-  
+
     nav.page-header__item a:before, nav.page-header__item a:after
   {
       position: relative;
@@ -231,19 +231,19 @@ h1 {
       height: 1px;
       content: ' | ';
   }
-  
+
   nav.page-header__item a:before
   {
       left: 0px;
       top: 0px;
   }
-  
+
   nav.page-header__item a:after
   {
       right: 0px;
       bottom: 0px;
   }
-  
+
   nav.page-header__item a:hover:before, nav.page-header__item a:hover:after
   {
       opacity: 1;
@@ -384,7 +384,7 @@ h1 {
   .grid__item {
     background-color: lightgray;
   }
-  
+
   @media all and (max-width: 500px) {
     .grid {
       -ms-grid-columns: 1fr;
@@ -428,7 +428,7 @@ h1 {
       fill: #879fc0;
     }
   }
- 
+
   @-webkit-keyframes color-change_2 {
     from {
       fill: #879fc0;
@@ -437,7 +437,7 @@ h1 {
       fill: #263245;
     }
   }
- 
+
   @keyframes color-change_2 {
     from {
       fill: #879fc0;
@@ -446,7 +446,7 @@ h1 {
       fill: #263245;
     }
   }
- 
+
  .back {
    -webkit-animation-duration: 6s;
            animation-duration: 6s;
@@ -459,7 +459,7 @@ h1 {
    -webkit-animation-timing-function: linear;
            animation-timing-function: linear;
  }
- 
+
  .front {
    -webkit-animation-duration: 6s;
            animation-duration: 6s;
@@ -472,10 +472,3 @@ h1 {
    -webkit-animation-timing-function: linear;
            animation-timing-function: linear;
  }
-
-
-
-
- 
- 
- 
