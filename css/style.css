@@ -8,6 +8,7 @@ Highlight Color (Sky): #879fc0
 Lowlight Color (Plum): #281f29
  */
 
+
 :root {
   --navy:#263245;
   --mauve: #87728c;
@@ -33,12 +34,12 @@ h1 {
     font-variant: none;
     color: var(--plum);
   }
-  
+
   h2 {
     font-size: 24px;
     font-weight: 200;
   }
-  
+
   h3 {
     font-size: 18px;
     font-weight: 200;
@@ -82,14 +83,14 @@ h1 {
     transition: 0.6s opacity;
   }
 
-  button:hover, 
+  button:hover,
   button:focus,
   .button:hover,
   .button:focus {
     /* lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
     background-color: var(--mauve);
-    color: var(--snow)e;
+    color: var(--snow);
     /* reduces the opacity of the button */
     opacity: 0.8;
   }
@@ -159,7 +160,7 @@ h1 {
       z-index: 0;
       cursor: pointer;
   }
-  
+
     nav.page-header__item a:before, nav.page-header__item a:after
   {
       position: relative;
@@ -168,19 +169,19 @@ h1 {
       height: 1px;
       content: ' | ';
   }
-  
+
   nav.page-header__item a:before
   {
       left: 0px;
       top: 0px;
   }
-  
+
   nav.page-header__item a:after
   {
       right: 0px;
       bottom: 0px;
   }
-  
+
   nav.page-header__item a:hover:before, nav.page-header__item a:hover:after
   {
       opacity: 1;
@@ -294,7 +295,7 @@ h1 {
   .grid__item {
     background-color: lightgray;
   }
-  
+
   @media all and (max-width: 500px) {
     .grid {
       grid-template-columns: 1fr;
@@ -328,7 +329,7 @@ h1 {
       fill: #879fc0;
     }
   }
- 
+
   @keyframes color-change_2 {
     from {
       fill: #879fc0;
@@ -337,7 +338,7 @@ h1 {
       fill: #263245;
     }
   }
- 
+
  .back {
    animation-duration: 6s;
    animation-name: color-change;
@@ -345,7 +346,7 @@ h1 {
    animation-direction: alternate;
    animation-timing-function: linear;
  }
- 
+
  .front {
    animation-duration: 6s;
    animation-name: color-change_2;
@@ -353,10 +354,4 @@ h1 {
    animation-direction: alternate;
    animation-timing-function: linear;
  }
- }
-
-
-
- 
- 
  
