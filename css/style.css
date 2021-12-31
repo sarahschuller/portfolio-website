@@ -295,6 +295,7 @@ h1 {
     padding: 10px;
   }
 
+  /* Media query to adjust work page grids for small screens */
   @media all and (max-width: 500px) {
     .grid {
       grid-template-columns: 1fr;
@@ -320,6 +321,9 @@ h1 {
       font-size: 35px;
     }
   }
+  /*END Work page media queries */
+
+  /* keyframe animations for about page svg skyline graphic */
   @keyframes color-change {
     from {
       fill: #263245;
@@ -353,3 +357,18 @@ h1 {
    animation-direction: alternate;
    animation-timing-function: linear;
  }
+/*END about page graphic animations */
+
+/*media query to adjust home page profile sizing for small screens */
+@media all and (min-width: 300px) and (max-width: 750px){
+  .profile {
+    margin: 20px;
+    text-align: center;
+    height: 800px;
+  }
+  .profile__portrait {
+    width: 200px;
+    float: none;
+    margin-left: 40px;
+  }
+}
