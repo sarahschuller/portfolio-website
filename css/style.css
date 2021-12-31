@@ -1,20 +1,9 @@
-/*
-Colors used
-
-Background Color (Snow): #f6f5f6
-Primary Color (Navy Blue): #263245
-Secondary Color (Mauve): #837b8e
-Highlight Color (Sky): #879fc0
-Lowlight Color (Plum): #281f29
- */
-
-
 :root {
-  --navy:#263245;
-  --mauve: #87728c;
-  --sky: #879fc0;
-  --plum: #281f29;
-  --snow: #f6f5f6;
+  --snow:#f3f7f3;
+  --gray: #9b9fbd;
+  --blush: #be7576;
+  --salmon: #ba3d52;
+  --blackberry: #211520;
 }
 
 * {
@@ -22,9 +11,10 @@ Lowlight Color (Plum): #281f29
 }
 
 body {
-    background-color: var(--snow);
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
+    background-color: var(--snow);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%239b9fbd' fill-opacity='0.13'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 h1 {
@@ -32,12 +22,12 @@ h1 {
     font-weight: 300;
     text-decoration: none;
     font-variant: none;
-    color: var(--plum);
+    color: var(--blackberry);
   }
 
   h2 {
-    font-size: 24px;
-    font-weight: 200;
+    font-size: 28px;
+    font-weight: 400;
   }
 
   h3 {
@@ -46,24 +36,24 @@ h1 {
   }
 
   a {
-      color: var(--navy);
+      color: var(--blackberry);
       text-decoration: none;
   }
 
   a:visited {
       /* visited link */
-      color: var(--mauve);
+      color: var(--salmon);
   }
 
   a:hover, a:focus {
     /* No underlining when hovering over a link */
-    color: var(--sky);
+    color: var(--blackberry);
     text-decoration: none;
   }
 
   a:active {
       /* selected link */
-      color: var(--plum);
+      color: var(--blackberry);
   }
 
   .button, button {
@@ -73,7 +63,7 @@ h1 {
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles button */
-    background-color: var(--navy);
+    background-color: var(--gray);
     color: var(--snow);
     text-decoration: none;
     padding: 5px;
@@ -89,7 +79,7 @@ h1 {
   .button:focus {
     /* lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
-    background-color: var(--mauve);
+    background-color: var(--gray);
     color: var(--snow);
     /* reduces the opacity of the button */
     opacity: 0.8;
@@ -105,7 +95,12 @@ h1 {
 
   .profile {
     max-width: 700px;
+    height: 400px;
     margin: 40px auto;
+    padding: 20px;
+    background-color: var(--snow);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5%;
   }
 
   .profile__portrait {
@@ -126,7 +121,7 @@ h1 {
   .page-header {
     display: flex;
     margin-top: 10px;
-    margin-left: 10px;
+    padding: 10px;
   }
 
   .page-header__item {
@@ -159,6 +154,7 @@ h1 {
       position: relative;
       z-index: 0;
       cursor: pointer;
+      color: var(--snow);
   }
 
     nav.page-header__item a:before, nav.page-header__item a:after
@@ -193,7 +189,7 @@ h1 {
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
-    color: var(--plum)
+    color: var(--blackberry)
   }
 
   .about_me {
@@ -224,7 +220,7 @@ h1 {
     width: 75%;
     border: 1px solid var(--plum);
     background-color: lightgray;
-    color: var(--navy);
+    color: var(--blackberry);
   }
 
   thead {
@@ -266,7 +262,7 @@ h1 {
     border: none;
     display: inline-block;
     font-family: inherit;
-    background-color: var(--navy);
+    background-color: var(--blackberry);
     color: var(--snow);
     text-decoration: none;
     padding: 5px;
@@ -282,7 +278,7 @@ h1 {
     padding: 10px 15px;
     margin: 12px 20px;
     box-sizing: border-box;
-    border: 1px solid var(--plum);
+    border: 1px solid var(--blackberry);
     resize: none;
   }
 
@@ -295,6 +291,8 @@ h1 {
 
   .grid__item {
     background-color: lightgray;
+    text-align: center;
+    padding: 10px;
   }
 
   @media all and (max-width: 500px) {
