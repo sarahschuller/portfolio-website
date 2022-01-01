@@ -27,6 +27,7 @@ h1 {
     font-family: 'Bebas Neue', cursive;
     font-size: 60px;
     font-weight: 600;
+    letter-spacing: 4px;
     color: var(--dark);
   }
 
@@ -44,6 +45,7 @@ h1 {
 
   a {
       font-family: 'Bebas Neue', cursive;
+      letter-spacing: 1px;
       color: var(--light);
       text-decoration: none;
       font-weight: 500;
@@ -147,14 +149,17 @@ h1 {
 
   span {
     font-size: 20px;
-    font-weight: 500;
-    text-decoration: none;
+    font-weight: 600;
     color: var(--dark)
   }
 
   .about_me {
     margin: 40px auto;
     max-width: 700px;
+    padding: 20px;
+    background-color: var(--light);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5%;
   }
 
   .resume {
@@ -175,6 +180,7 @@ h1 {
     margin-top: 30px;
   }
 
+  /* About me page skills table */
   table {
     margin: 0 auto;
     width: 75%;
@@ -242,6 +248,7 @@ h1 {
     resize: none;
   }
 
+  /* Work page project grids */
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -250,9 +257,10 @@ h1 {
   }
 
   .grid__item {
-    background-color: lightgray;
+    background-color: var(--light);
     text-align: center;
     padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   }
 
   /* Media query to adjust work page grids for small screens */
@@ -283,22 +291,36 @@ h1 {
   }
   /*END Work page media queries */
 
+/*media query to adjust home page profile sizing for small screens */
+@media all and (min-width: 300px) and (max-width: 750px){
+  .profile {
+    margin: 20px;
+    text-align: center;
+    height: 800px;
+  }
+  .profile__portrait {
+    width: 200px;
+    float: none;
+    margin-left: 40px;
+  }
+}
+
   /* keyframe animations for about page svg skyline graphic */
   @keyframes color-change {
     from {
-      fill: #263245;
+      fill: var(--main);
     }
     to {
-      fill: #879fc0;
+      fill: var(--dark);
     }
   }
 
   @keyframes color-change_2 {
     from {
-      fill: #879fc0;
+      fill: var(--dark);
     }
     to {
-      fill: #263245;
+      fill: var(--main);
     }
   }
 
@@ -318,17 +340,3 @@ h1 {
    animation-timing-function: linear;
  }
 /*END about page graphic animations */
-
-/*media query to adjust home page profile sizing for small screens */
-@media all and (min-width: 300px) and (max-width: 750px){
-  .profile {
-    margin: 20px;
-    text-align: center;
-    height: 800px;
-  }
-  .profile__portrait {
-    width: 200px;
-    float: none;
-    margin-left: 40px;
-  }
-}
