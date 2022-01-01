@@ -163,12 +163,22 @@ h1 {
     border-radius: 5%;
   }
 
+  .about_header {
+    display: flex;
+    justify-content: center;
+  }
+
   .resume {
     margin: 0 auto;
     max-width: 700px;
     text-align: center;
   }
 
+  .work_header {
+    display: flex;
+    justify-content: center;
+  }
+  
  .contact_me {
     margin: 20px auto;
     max-width: 700px;
