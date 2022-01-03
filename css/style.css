@@ -96,24 +96,23 @@ h1 {
 
   .logo {
     max-width: 50px;
-    color: var(--dark);
   }
 
   .profile {
     max-width: 800px;
     height: 400px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 40px 140px;
     background-color: var(--light);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 5%;
   }
 
   .profile__portrait {
-    float: left;
     max-width: 250px;
-    margin-right: 40px;
+    margin-right: 0px;
     border-radius: 50%;
+    float: left;
   }
 
   .page-footer {
