@@ -149,7 +149,7 @@ h1 {
     max-width: 800px;
     height: 400px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 40px 140px;
     background-color: #f3f7f3;
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -157,10 +157,10 @@ h1 {
   }
 
   .profile__portrait {
-    float: left;
     max-width: 250px;
-    margin-right: 40px;
+    margin-right: 0px;
     border-radius: 50%;
+    float: left;
   }
 
   .page-footer {
