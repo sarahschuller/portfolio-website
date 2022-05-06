@@ -180,6 +180,11 @@ span {
   justify-content: center;
 }
 
+.work_img {
+  width: 400px; 
+  margin: 20px;
+}
+
 .contact_me {
   margin: 20px auto;
   max-width: 700px;
@@ -330,6 +335,12 @@ tr:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media all and (min-width: 200px) and (max-width: 500px) {
+  .work_img {
+    width: 200px;
   }
 }
 
