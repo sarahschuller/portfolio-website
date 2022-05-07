@@ -41,7 +41,7 @@
             </header>
         <main>
             <div class="contact_me">
-                <form onsubmit="sendEmail()">
+                <form action="https://usebasin.com/f/2c6bcde44fec" method="POST">
                     <h1>Contact Me</h1>
 
                     <fieldset class="contact-form">
@@ -56,8 +56,9 @@
                         <input type="text" name="phone" placeholder="555-555-5555" id="phone">
 
                         <label for="message" id="message">Message</label>
-                        <textarea name="comment" maxlength="250">
+                        <textarea name="message" maxlength="250">
                         </textarea>
+                        <p id="js-form-response"></p>
                     
                     </fieldset>
                     
