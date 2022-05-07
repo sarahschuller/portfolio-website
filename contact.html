@@ -46,16 +46,16 @@
 
                     <fieldset class="contact-form">
                         
-                        <label for="text">Name</label>
-                        <input type="name" name="name" id="name" placeholder="Your Name" required>
+                        <label for="text" id="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
 
                         <label for="email">E-mail</label>
                         <input type="email" name="email" placeholder="name@domain.com" id="email" required>
                         
                         <label for="phone">Phone Number</label>
-                        <input type="phone" name="phone" placeholder="555-555-5555" id="phone">
+                        <input type="text" name="phone" placeholder="555-555-5555" id="phone">
 
-                        <label for="message">Message</label>
+                        <label for="message" id="message">Message</label>
                         <textarea name="comment" maxlength="250">
                         </textarea>
                     
@@ -85,22 +85,5 @@
             </div>
         </footer>
     <script src="js/tota11y.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script>
-        function sendEmail(){
-            Email.send({
-                Host : "smtp.yourisp.com",
-                Username : "username",
-                Password : "password",
-                To : 'them@website.com',
-                From : "you@isp.com",
-                Subject : "New Portfolio Enquiry",
-                Body : "And this is the body"
-            }).then(
-            message => alert(message)
-            );
-        }
-    </script>
     </body>
 </html>

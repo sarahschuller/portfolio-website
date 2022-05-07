@@ -11,7 +11,7 @@
     <!-- Font Awesome Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- My CSS -->
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
     <body>
         <!---Header including the logo and main navigation-->
@@ -54,38 +54,45 @@
                    <ul class="hobbies">
                        <li>Binging on scary movies</li>
                        <li>Cheering for my Fantasy Football team</li>
-                       <li>Making greeting cards and other paper crafts</li>
                        <li>Reading fantasy and science fiction novels </li>
                        <li>Spending time with my husband and our two cats</li>
                    </ul>
-                <br><br><br>
-                <div style="overflow-x:auto;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Skills</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>HTML</td>
-                        </tr>
-                        <tr>
-                            <td>CSS</td>
-                        </tr>
-                        <tr>
-                            <td>JavaScript</td>
-                        </tr>
-                        <tr>
-                            <td>Adobe Illustrator</td>
-                        </tr>
-                    </tbody>
-                  </table>
+
+                <div class="skills_header">
+                    <h1>Skills</h1>
+                </div>
+
+                <div class="grid">
+                    <div class="about__grid">
+                        <img src="./img/html.svg" alt="html logo">
+                    </div>
+
+                    <div class="about__grid">
+                        <img src="./img/css.svg" alt="css logo">
+                    </div>
+
+                    <div class="about__grid">
+                        <img src="./img/javascript.svg" alt="javascript logo">
+                    </div>
+
+                    <div class="about__grid">
+                        <img src="./img/nodejs.svg" alt="node.js logo">
+                    </div>
+
+                    <div class="about__grid">
+                        <img src="./img/react.svg" alt="react logo">
+                    </div>
+
+                    <div class="about__grid">
+                        <img src="./img/angular.svg" alt="angular logo">
+                    </div>
+
                 </div>
                   <br><br>
-                  <div class="resume">
+                  <!-- <div class="resume">
                       <a href="#" class="button" download>Download my CV</a><br><br>
-                  </div>
+                  </div> -->
+                  
                     <svg id="boston" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550.06 116.18"><defs><style>.back{fill:#263245;}.front{fill:#879fc0;}</style></defs><path id="background" class="back" d="M433,326.89h17.82v-7.06l5.34-1.06h2.22v-1.41l2-.83v-1.22h3.3v-3.08l1.58-.16V310h1.09V288.83L486,291.75v-17.7l4.87-1v-3.74H498l15.23,1.3v3.42l3.66.23v-2.7l1.22-.14V250s9.11-2.72,27.1,0v8.83l5.4,4.46,2,.4v6.22l3.25.69v10l4.47.57,1.22,8.13H564l1.21-8.13,1.63-.41v-2.63l1.62-.62V276.1l21.94.62,6.1,1.22v26.9l1.21-.09V280.41l2.44-.44v-4.28l26.41-1,5.28,1.22v3.68l2,.38V265.63l22.34-1.91,13.41,1.22v20.6l2,.12v-8.94h7.72v-5.34l14.22.06,6.09,1.63v53.82h1.1v-1.32l1.34-.1v-1.13l5.28-.09v2.64h2V276.1L731,274.28l12.6.82v8.59s19.9-1.69,21.53,1.56v4.81l1.62.07v-30l2,0v-1.42l25.6-1.43v3.69l6.09,1.19v54h5.69V286l8.53-.7v-10l4.06-2.21,7.32-2v-4.37l6.5-3.34,23.56-2v-9.21l.81,1.08,6.09-.81,7.32.81v8.57l12.18,1.59h3.66l6.09.81v25.11l16.25.08v-16.5l14.63-2.6,26,1.63v29.7l4.87,1.58v2.94l1.63.31v16.93l2.84.13v-5.67l1.22,0v-3.68s12.6-1.6,15,0v4.69L980,319v2.49l3-.2V358H433Z" transform="translate(-433 -248.82)"/><path id="foreground" class="front" d="M433,343.65h11l2.84,1.63h16.3l-.05-6.09h2.1l.14-2.24h.88s-1.29-3.25,9.27-2.44v-11H486.3v31h1.44v-4.31l21-.28L512,347.1l19.09.4v-1l4.87.16v1.68l15.85.35,8.12-2.44,4.47,3.66v4.59h15.07l2,1.1,4.47-2.85h2V322.72h1.16v-5.14h1.43v-4.92H618.9V317l2,.06v15.74l1.62-.3v-1.13l3.25-.9v-3l4.07-.25V309h7.34l1.19-1.68h13.18v1.27s13.44-.29,12.72,1.86l0,27.08,4.49-1.56,4.92,1.42,1-1.42h1.44l0,3,8.94.41v-1.06l24.37.25V303.63l2-5.28,1.63-3.66v-9.54l-1.63.2L711,283h2.11V279.2h1l4.66-15,4.87,13.41,1.63.81v15.95l3.25,8.83v12.11l6.9.08,7.72,6.5V327l4.88.57v18.52l4.06.16,2.44-4.87,1.21-.41v-3.3l2-.35V334l7.31.09v2.78l7.72.06v-2.11l2.43.08v-1.73l27.63-.3,11.37.4v4.21l30.07.26V325.59l11,0v-2.24l8.12-.2v2.25l23.16.59v7.42l4.06,4,8.94.4v-1.82l3.65-3.86,3.66-.41,2.44,2.44v3.81l26.81.25V341l1.62,0v-6l13.82-.12,3.25-.41h24.78v1.43h3.45V365H433Z" transform="translate(-433 -248.82)"/></svg>
                 </div>
         </main>

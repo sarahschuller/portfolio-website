@@ -283,6 +283,21 @@ tr:hover {
   text-align: center;
 }
 
+.skills_header {
+  text-align: center;
+}
+
+.about__grid {
+  text-align: center;
+}
+
+.about__grid img {
+  object-fit: cover;
+  width: 30%;
+  max-height: 100%;
+}
+
+
 /* Work page project grids */
 .grid {
   display: grid;
