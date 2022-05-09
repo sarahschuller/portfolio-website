@@ -295,7 +295,9 @@ tr:hover {
   object-fit: cover;
   width: 30%;
   max-height: 100%;
-  animation: slideIn 2s linear 1s;
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 
@@ -393,17 +395,11 @@ tr:hover {
 }
 /*END about page graphic animations */
 
-@keyframes slideIn {
-  from {
-    transform: translateY(-35px);
-  }
-
-  
-  50% {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(0) 
-  }
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
