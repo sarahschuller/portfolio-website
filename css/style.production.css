@@ -377,6 +377,12 @@ tr:hover {
      object-fit: cover;
   width: 30%;
   max-height: 100%;
+  -webkit-animation: fadeInAnimation ease 5s;
+          animation: fadeInAnimation ease 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 
@@ -405,16 +411,13 @@ tr:hover {
     grid-template-columns: 1fr;
   }
 }
-
-@media all and (min-width: 500px) and (max-width: 750px) {
+@media all and (min-width: 500px) and (max-width: 750px){
   .grid {
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
-
-@media (max-width: 750px) {
-  /* shared code */
+@media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
@@ -514,3 +517,21 @@ tr:hover {
           animation-timing-function: linear;
 }
 /*END about page graphic animations */
+
+@-webkit-keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
