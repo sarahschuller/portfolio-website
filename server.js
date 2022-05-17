@@ -57,8 +57,8 @@ app.post("/send", (req, res) => {
 });
 
 //Index page (static HTML)
-app.route("/contact.html").get(function (req, res) {
-  res.sendFile(process.cwd() + "/public/contact.html");
+app.route("/").get(function (req, res) {
+  res.sendFile(process.cwd() + "/public/index.html");
 });
 
 /*************************************************/
