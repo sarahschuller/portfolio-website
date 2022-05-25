@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- My CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
     <body>
         <!---Header including the logo and main navigation-->
@@ -47,48 +49,105 @@
                     </h1>
                 </div>
                 <p>
-                   Hi, my name is Sarah and I'm a web-developer based in Massachusetts. I have a background in Art and Graphic Design and have recently completed the Career Foundry Full Stack Web Development course.
-                   <br><br>
-                   When I'm not on coding, you can find me:
-                </p>
-                   <ul class="hobbies">
-                       <li>Binging on scary movies</li>
-                       <li>Cheering for my Fantasy Football team</li>
-                       <li>Reading fantasy and science fiction novels </li>
-                       <li>Spending time with my husband and our two cats</li>
-                   </ul>
-
-                <div class="skills_header">
-                    <h1>Skills</h1>
-                </div>
-
-                <div class="grid">
-                    <div class="about__grid">
-                        <img src="./img/html.svg" alt="html logo">
+                     I am a Web Developer with a background in sales and experience with graphic design. I have always had a passion for working creatively and chose to make the leap into technology, as it has been a lifelong interest of mine.
+                </p>         
+                <div class="container">
+                    <!-- First bar -->
+                    <div class="progress-bar" data-percentage="90%">
+                      <h4 class="progress-title-holder">
+                        <span class="progress-title">HTML</span>
+                        <span class="progress-number-wrapper">
+                          <span class="progress-number-mark">
+                            <span class="percent"></span>
+                            <span class="down-arrow"></span>
+                          </span>
+                        </span>
+                      </h4>
+                      <div class="progress-content-outter">
+                        <div class="progress-content"></div>
+                      </div>
+                    </div> 
+                      
+                    <!-- Second bar -->
+                    <div class="progress-bar" data-percentage="85%">
+                      <h4 class="progress-title-holder clearfix">
+                        <span class="progress-title">CSS</span>
+                        <span class="progress-number-wrapper">
+                          <span class="progress-number-mark">
+                            <span class="percent"></span>
+                            <span class="down-arrow"></span>
+                          </span>
+                        </span>
+                      </h4>
+                      <div class="progress-content-outter">
+                        <div class="progress-content"></div>
+                      </div>
                     </div>
-
-                    <div class="about__grid">
-                        <img src="./img/css.svg" alt="css logo">
+                      
+                    <!-- Third bar -->
+                    <div class="progress-bar" data-percentage="60%">
+                      <h4 class="progress-title-holder clearfix">
+                        <span class="progress-title">Javascript</span>
+                        <span class="progress-number-wrapper">
+                          <span class="progress-number-mark">
+                            <span class="percent"></span>
+                            <span class="down-arrow"></span>
+                          </span>
+                        </span>
+                      </h4>
+                      <div class="progress-content-outter">
+                        <div class="progress-content"></div>
+                      </div>
+                    </div> 
+                      
+                    <!-- Fourth bar -->
+                    <div class="progress-bar" data-percentage="60%">
+                      <h4 class="progress-title-holder">
+                        <span class="progress-title">React</span>
+                        <span class="progress-number-wrapper">
+                          <span class="progress-number-mark">
+                            <span class="percent"></span>
+                            <span class="down-arrow"></span>
+                          </span>
+                        </span>
+                      </h4>
+                      <div class="progress-content-outter">
+                        <div class="progress-content"></div>
+                      </div>
+                    </div> 
+                      
+                    <!-- Fifth bar -->
+                    <div class="progress-bar" data-percentage="50%">
+                      <h4 class="progress-title-holder clearfix">
+                        <span class="progress-title">Angular</span>
+                        <span class="progress-number-wrapper">
+                          <span class="progress-number-mark">
+                            <span class="percent"></span>
+                            <span class="down-arrow"></span>
+                          </span>
+                        </span>
+                      </h4>
+                      <div class="progress-content-outter">
+                        <div class="progress-content"></div>
+                      </div>
                     </div>
-
-                    <div class="about__grid">
-                        <img src="./img/javascript.svg" alt="javascript logo">
+                      
+                    <!-- Sixth bar -->
+                    <div class="progress-bar" data-percentage="60%">
+                      <h4 class="progress-title-holder clearfix">
+                        <span class="progress-title">Node.js</span>
+                        <span class="progress-number-wrapper">
+                          <span class="progress-number-mark">
+                            <span class="percent"></span>
+                            <span class="down-arrow"></span>
+                          </span>
+                        </span>
+                      </h4>
+                      <div class="progress-content-outter">
+                        <div class="progress-content"></div>
+                      </div>
+                    </div> 
                     </div>
-
-                    <div class="about__grid">
-                        <img src="./img/nodejs.svg" alt="node.js logo">
-                    </div>
-
-                    <div class="about__grid">
-                        <img src="./img/react.svg" alt="react logo">
-                    </div>
-
-                    <div class="about__grid">
-                        <img src="./img/angular.svg" alt="angular logo">
-                    </div>
-
-                </div>
-                  <br><br>
                   <!-- <div class="resume">
                       <a href="#" class="button" download>Download my CV</a><br><br>
                   </div> -->
@@ -109,5 +168,6 @@
             </div>
         </footer>
     <script src="js/tota11y.min.js"></script>
+    <script src="js/skills.js"></script>
     </body>
 </html>
