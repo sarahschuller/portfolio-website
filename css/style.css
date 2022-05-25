@@ -19,11 +19,12 @@ body {
   font-size: 14px;
   font-weight: 300;
   background-color: var(--light);
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%2393e1d8' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 h1 {
   font-family: "Bebas Neue", cursive;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 600;
   letter-spacing: 4px;
   color: var(--dark);
@@ -99,7 +100,7 @@ button:focus,
 
 .profile {
   max-width: 800px;
-  height: 400px;
+  height: 500px;
   margin: 40px auto;
   padding: 40px 140px;
   background-color: var(--main);
@@ -108,10 +109,24 @@ button:focus,
 }
 
 .profile__portrait {
-  max-width: 250px;
-  margin-right: 0px;
+  position: absolute;
+  width: 180px;
+  margin: auto;
+  margin-top: -20px;
+  left: 0;
+  right: 0;
   border-radius: 50%;
-  float: left;
+}
+
+.profile_content {
+  max-width: 600px;
+  height: 500px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .page-footer {
@@ -157,9 +172,9 @@ span {
   margin: 40px auto;
   max-width: 700px;
   padding: 20px;
-  background-color: var(--light);
+  background-color: var(--main);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 5%;
+  border-radius: 1%;
 }
 
 .about_header {
@@ -184,15 +199,15 @@ span {
 }
 
 .contact_me {
-  margin: 20px auto;
+  margin: 40px auto;
   max-width: 700px;
   display: flex;
   justify-content: center;
   text-align: center;
   padding: 20px;
-  background-color: var(--light);
+  background-color: var(--main);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 5%;
+  border-radius: 1%;
 }
 
 .contact_me a {
@@ -200,7 +215,7 @@ span {
 }
 
 .contact_me a:hover {
-  color: var(--main);
+  color: var(--accent);
 }
 
 form {
@@ -220,14 +235,14 @@ fieldset {
 }
 
 .contact-form label {
-  color: #395870;
+  color: var(--dark);
   display: block;
   font-weight: bold;
   margin: 10px 0 5px 0;
 }
 
 .contact-form input {
-  background: #fff;
+  background: var(--light);
   border: 1px solid var(--accent);
   padding: 6px;
   width: 100%;
@@ -250,86 +265,133 @@ textarea {
   resize: none;
 }
 
-/* About me page skills table */
-table {
-  margin: 0 auto;
-  width: 75%;
-  border: 1px solid var(--dark);
-  background-color: lightgray;
-  color: var(--dark);
-}
-
-thead {
-  background-color: var(--main);
-  color: var(--light);
-  height: 30px;
-}
-
-tbody {
-  background-color: var(--light);
-  text-align: center;
-  height: 100px;
-}
-
-tr:hover {
-  background-color: var(--bright);
-  color: var(--light);
-}
-
-.hobbies {
-  list-style: none;
-  text-align: center;
-}
 
 .skills_header {
   text-align: center;
 }
 
-.about__grid {
-  text-align: center;
+/* About Me Skills Status Bars */
+
+.container {
+  height: 300px;
+  max-width: 600px;
+  margin: 70px auto;
 }
 
-.about__grid img {
-  object-fit: cover;
-  width: 30%;
-  max-height: 100%;
-  animation: fadeInAnimation ease 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+.progress-bar {
+  margin: 0 0 10px;
+  overflow: hidden;
+  padding-right: 24px; /* Separate bars from container */
 }
 
-.footbg {
+.progress-title-holder {
+  padding-bottom: 7px;
+  position: relative;
+  margin: 3px auto;
+  font-family: "Bebas Neue", cursive;
+  font-size: 10px;
+  line-height: 5px;
+  font-weight: 100;
+  color: var(--dark);
+}
+
+.progress-title {
+  z-index: 100;
+}
+
+.progress-number-wrapper {
+  width: 100%;
+  z-index: 10;
+}
+
+.progress-number-mark {
+  margin-bottom: 4px;
+  border-radius: 3px;
+  background-color: var(--light);
+  padding: 0 8px;
   position: absolute;
-  width: 200px;
-  opacity: 10%;
+  bottom: 0;   
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%); 
+} 
+
+.progress-number-wrapper,
+.progress-number-mark {
+  font-family: "Bebas Neue", cursive;
+  font-size: 11px;
+  line-height: 24px;
+  height: 24px;
+  letter-spacing: 0px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: none;
+  color: var(--light);
 }
+
+.down-arrow {
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid var(--dark);
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);  
+}
+
+.progress-content-outter {
+  height: 12px;
+}
+
+.progress-content {
+  height: 21px;
+  background-color: var(--light);
+  width: 0%; /* Initial value */
+}
+
+/* End About Me Skills Status Bars */
 
 /* Work page project grids */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  justify-content: center;
   grid-gap: 10px;
   margin: 10px 10px;
 }
 
 .grid__item {
-  background-color: var(--light);
+  background-color: var(--main);
   text-align: center;
   padding: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Media query to adjust work page grids for small screens */
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+@media all and (min-width: 600px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media all and (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
@@ -362,10 +424,21 @@ tr:hover {
   }
 }
 
+@media all and (min-width: 200px) and (max-width: 500px) {
+  .profile__portrait {
+    width: 150px;
+    margin-top: -235px;
+  }
+
+  .profile_content {
+    margin-top: 100px;
+  }
+}
+
 /* keyframe animations for about page svg skyline graphic */
 @keyframes color-change {
   from {
-    fill: var(--main);
+    fill: var(--accent);
   }
   to {
     fill: var(--dark);
@@ -377,7 +450,7 @@ tr:hover {
     fill: var(--dark);
   }
   to {
-    fill: var(--main);
+    fill: var(--accent);
   }
 }
 
