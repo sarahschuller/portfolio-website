@@ -531,6 +531,13 @@ textarea {
 }
 /*END Work page media queries */
 
+/* Media query to adjust about grid for small screens */
+@media all and (max-width: 600px) {
+  .about_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*media query to adjust home page profile sizing for small screens */
 @media all and (min-width: 200px) and (max-width: 500px) {
   .profile {
