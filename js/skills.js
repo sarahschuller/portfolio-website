@@ -1,18 +1,21 @@
 jQuery(document).ready(function(){
-  
+  $(window).on("scroll", function() {
+    if ((window.innerHeight + window.scrollY) <= document.body.offsetHeight) {
   jQuery('.progress-bar').each(function() {
-    jQuery(this).find('.progress-content').delay(2500).animate({
+    jQuery(this).find('.progress-content').animate({
       width:jQuery(this).attr('data-percentage')
-    },6500);
+    },5500);
     
-    jQuery(this).find('.progress-number-mark').delay(2500).animate(
-      {left:jQuery(this).attr('data-percentage')},
-      {
-       duration: 6500,
-       step: function(now, fx) {
-         var data = Math.round(now);
-         jQuery(this).find('.percent').html(data + '%');
-       }
-    });  
+        jQuery(this).find('.progress-number-mark').animate(
+          {left:jQuery(this).attr('data-percentage')},
+          {
+          duration: 5500,
+          step: function(now, fx) {
+            var data = Math.round(now);
+            jQuery(this).find('.percent').html(data + '%');
+          }
+        });  
+      });
+    }
   });
 });
