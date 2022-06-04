@@ -447,7 +447,7 @@ span {
 .work_img {
   -o-object-fit: contain;
      object-fit: contain;
-  max-width: 400px;
+  max-width: 275px;
   margin: 20px;
 }
 
@@ -615,8 +615,8 @@ textarea {
 .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50px 10px 50px;
-  grid-template-columns: 50px 50px;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -634,27 +634,28 @@ textarea {
 }
 
 /* Media query to adjust work page grids for small screens */
-@media all and (max-width: 600px) {
+@media all and (max-width: 500px) {
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 600px) and (max-width: 750px) {
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+
+  }
+}
+
+@media all and (min-width: 750px) and (max-width: 990px) {
   .grid {
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 990px) {
-  .grid {
-    -ms-grid-columns: 1fr 10px 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media all and (min-width: 992px) {
+@media all and (min-width: 990px) {
   .grid {
     -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
