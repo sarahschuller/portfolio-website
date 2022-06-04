@@ -445,7 +445,9 @@ span {
 }
 
 .work_img {
-  width: 400px; 
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 400px;
   margin: 20px;
 }
 
@@ -620,7 +622,7 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   grid-gap: 10px;
-  margin: 10px 10px;
+  margin: 10px 50px;
 }
 
 .grid__item {
